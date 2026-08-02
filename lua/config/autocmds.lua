@@ -42,7 +42,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- 为python文件天加<F12>快速润型uv run %
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "py",
+  pattern = "python",
   group = vim.api.nvim_create_augroup("run_py", { clear = true }),
   callback = function(args)
     local bufnr = args.buf

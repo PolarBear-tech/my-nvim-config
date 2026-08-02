@@ -11,14 +11,8 @@ local function start_preview(_)
 
   Terminal:new({
     cmd = cmd,
-    direction = "vertical",
+    direction = "horizontal",
   }):toggle()
-end
-
-local function run_xmake(_)
-  local terms = require("toggleterm.terminal")
-  local term = terms.get_or_create_term(1)
-  term:send("xmake r", true)
 end
 
 vim.api.nvim_create_user_command("PreviewManimAnimation", start_preview, { nargs = 0 })
