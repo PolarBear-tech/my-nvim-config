@@ -3,9 +3,9 @@ local function start_preview(_)
   -- TODO 这里需要加上判断
   local scene_name = vim.fn.expand("<cword>")
 
-  local curr_path = vim.fn.expand("%:p")
+  local curr_path = vim.fs.normalize(vim.fn.expand("%:p"))
 
-  local cmd = "uv run manim -pql " .. curr_path .. " " .. scene_name
+  local cmd = "uv run manim -pql " .. curr_path .. " " .. scene_name .. "; pwsh"
 
   local Terminal = require("toggleterm.terminal").Terminal
 
@@ -15,4 +15,4 @@ local function start_preview(_)
   }):toggle()
 end
 
-vim.api.nvim_create_user_command("PreviewManimAnimation", start_preview, { nargs = 0 })
+vim.api.nvim_create_user_command("RenderManimAnimation", start_preview, { nargs = 0 })

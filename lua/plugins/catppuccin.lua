@@ -16,7 +16,7 @@ return {
       nvimtree = true,
       snacks = {
         enabled = true,
-        indent_scope_color = "flamingo", -- catppuccin color (eg. `lavender`) Default: text
+        indent_scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
       },
       which_key = true,
       flash = true,

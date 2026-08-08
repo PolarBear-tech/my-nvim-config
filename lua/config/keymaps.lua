@@ -4,6 +4,7 @@
 
 -- jk 快速退出insert模式
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
+vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit insert mode" })
 
 -- HJKL 控制上下左右
 vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Move left under insert mode" })

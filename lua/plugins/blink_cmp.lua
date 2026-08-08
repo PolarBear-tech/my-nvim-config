@@ -3,7 +3,6 @@ return {
   opts = {
     completion = {
       menu = {
-        -- border = "rounded",
         winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc",
         max_height = 20,
         draw = {
@@ -51,7 +50,6 @@ return {
           min_width = 1,
           max_width = 100,
           max_height = 20,
-          -- border = "rounded",
           winblend = 0,
           winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc",
           scrollbar = true,
@@ -68,7 +66,6 @@ return {
         min_width = 1,
         max_width = 100,
         max_height = 20,
-        -- border = "rounded", -- Defaults to `vim.o.winborder` on nvim 0.11+ or 'padded' when not defined/<=0.10
         winblend = 0,
         winhighlight = "Normal:BlinkCmpSignatureHelp,FloatBorder:BlinkCmpSignatureHelpBorder",
         scrollbar = false, -- Note that the gutter will be disabled when border ~= 'none'

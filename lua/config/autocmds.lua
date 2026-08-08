@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 -- 为c文件添加<F12>快捷键运行xmake r
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "c",
-  group = vim.api.nvim_create_augroup("run_c", { clear = true }),
+  group = vim.api.nvim_create_augroup("c_run", { clear = true }),
   callback = function(args)
     local bufnr = args.buf
     vim.keymap.set({ "i", "n" }, "<f12>", function()
@@ -40,10 +40,10 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- 为python文件天加<F12>快速润型uv run %
+-- 为python文件添加<F12>快速运行uv run %
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "python",
-  group = vim.api.nvim_create_augroup("run_py", { clear = true }),
+  group = vim.api.nvim_create_augroup("py_run", { clear = true }),
   callback = function(args)
     local bufnr = args.buf
     local file = args.file
